@@ -351,7 +351,7 @@ class Jogo:
                     self.esta_rodando = False
                     sys.exit()
                 elif event.type == pygame.KEYDOWN :
-                    if event.key == pygame.K_p: # se for s tem que salvare sair, e r resetar
+                    if event.key == pygame.K_p: # se for s tem que salvar e sair, r resetar
                         self.pause = not self.pause
                     elif self.pause or self.fim_jogo:
     
@@ -387,7 +387,6 @@ class Jogo:
                 self.pynk.controlar_animacao()
                 self.inky.controlar_animacao()
                 self.clyde.controlar_animacao()
-                #self.tangerina.desaparecer()
                 self.tangerina.desenhar_tangerina(self.tela.tela)
 
                 comeu_tangerina = self.pacman.comer_tangerina(self.tangerina)

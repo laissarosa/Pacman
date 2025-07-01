@@ -179,7 +179,7 @@ class Pacman:
             elif event.key == pygame.K_DOWN:
                 self.direcao_comando = 3
 
-    def pode_mover(self, direcao: int, tabuleiro: list, celula_largura: int, celula_altura: int) -> bool: #consertar a centralização dos personagens
+    def pode_mover(self, direcao: int, tabuleiro: list, celula_largura: int, celula_altura: int) -> bool:
 
         incrementar_coluna, incrementar_linha = self.direcoes[direcao]
         novo_x = self.x_pixels + incrementar_coluna * self.velocidade
@@ -207,14 +207,11 @@ class Pacman:
         if 0 <= linha < len(tabuleiro) and 0 <= coluna < len(tabuleiro[0]):
             if tabuleiro[linha][coluna] == 1:
                 self.pontuação += 10
-                #audio.ouvir_comer_bolinhas()
                 tabuleiro[linha][coluna] = 0 
                 todas_bolinhas -=1
                 return todas_bolinhas, "comer_bolinhas"
-                #print (todas_bolinhas)
             elif tabuleiro[linha][coluna] == 2:
-                self.pontuação += 15
-                #audio.ouvir_superpoder(True) 
+                self.pontuação += 15 
                 tabuleiro[linha][coluna] = 0
                 todas_bolinhas -= 1
                 self.ativar_poder(fantasmas) 

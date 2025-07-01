@@ -5,7 +5,7 @@ import os
 from som.audio import Audio
 from imagens.imagem import Imagem
 from pygame import Surface
-#para controlar as telas start,game over e tudo+ que aparece na tela, como a tela de pause ou a tela de configurar audio
+#para controlar as telas start,game over, desenho das vidas do pacman, tela de pause, tela de configurar audio e tudo+
 class Cena:
     def __init__(self, imagem: Imagem):
         pygame.init()
@@ -59,7 +59,7 @@ class Cena:
         texto_rect.midtop = (x,y)
         tela.blit(texto, texto_rect)
 
-    def mostrar_tela_start (self, tela: Surface, audio: Audio) -> bool: #pergunatar se imagem e tela é bom de ter aqui
+    def mostrar_tela_start (self, tela: Surface, audio: Audio) -> bool: 
         audio.ouvir_tela_start()
         start_logo_rect = self.imagem.start_logo.get_rect()
         start_logo_rect.midtop = (250, 50)
@@ -91,7 +91,7 @@ class Cena:
                     audio.parar_musica_start()
                     return False
 
-    def mostrar_pontuação(self, pontuacao: int, tela: Surface) -> None:  # posso fazer pontuaçõa e vidas juntas
+    def mostrar_pontuação(self, pontuacao: int, tela: Surface) -> None: 
          self.mostrar_texto(f'Pontos:{pontuacao}', 15, 'yellow', 250, 600, tela)
 
     def desenhar_tela_final (self, todas_bolinhas: int, vidas:int, tela: Surface, audio: Audio) -> bool:
@@ -105,11 +105,9 @@ class Cena:
             self.mostrar_texto('Pressione R para reiniciar', 20, 'yellow', 250, 315, tela)
             audio.parar_som_sirene()
             return True
-            #jogo.fim_jogo = True
         return False
     
     def desenhar_configuracoes (self, tela: Surface) -> None:
-        #self.imagem.carregar_img_pause()
         tela_pause = self.imagem.pause_img.get_rect()
         tela_pause.midtop = (250, 400)
         tela.blit(self.imagem.pause_img, tela_pause)
@@ -123,7 +121,6 @@ class Cena:
 
     def ver_novo_volume(self, novo_volume: float, tela: Surface) -> None:
         tela.fill((0,0,0))
-        #self.imagem.carregar_img_pause()
         tela_pause = self.imagem.pause_img.get_rect()
         tela_pause.midtop = (250, 400)
         tela.blit(self.imagem.pause_img, tela_pause)
@@ -146,8 +143,7 @@ class Cena:
 
             for event in pygame.event.get():
                 if event.type == QUIT:
-                    ajustando = False #não posso ter isso aqui
-                    #jogo.esta_rodando = False #fecho tudo se apertar para sair logo no início
+                    ajustando = False 
                 elif event.type == pygame.KEYDOWN:
                     if event.key == pygame.K_1:
                         self.ajustar_sons(tela, audio)
@@ -169,7 +165,6 @@ class Cena:
             for event in pygame.event.get():
                 if event.type == QUIT:
                     ajustando_musica = False
-                   # jogo.esta_rodando = False #fecho tudo se apertar para sair logo no início
                 elif event.type == pygame.KEYDOWN:
                     if event.key == pygame.K_UP:
                         volume += 0.1
@@ -185,14 +180,12 @@ class Cena:
         volume = pygame.mixer.Channel(5).get_volume()
         ajustando_sons = True
         while ajustando_sons: 
-            #self.relogio.tick(self.fps)
             self.relogio.tick(self.fps)
             self.ver_novo_volume(volume, tela)
             tela.fill((0,0,0))
             for event in pygame.event.get():
                 if event.type == QUIT:
                     ajustando_sons = False
-                    #jogo.esta_rodando = False #fecho tudo se apertar para sair logo no início
                 elif event.type == pygame.KEYDOWN:
                     if event.key == pygame.K_UP:
                         volume += 0.1

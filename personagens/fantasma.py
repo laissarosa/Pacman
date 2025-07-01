@@ -201,97 +201,76 @@ class Fantasma:
         if direcao == 1:
             if alvo_pacman[0] > self.x and self.pode_mover(1, tabuleiro, celula_largura, celula_altura):
                 self.x -= self.velocidade
-                return self.x, self.y, direcao
             elif not self.pode_mover(1, tabuleiro, celula_largura, celula_altura):
                 if alvo_pacman[1] > self.y and self.pode_mover(2, tabuleiro, celula_largura, celula_altura):
                     direcao = 2
                     self.y -= self.velocidade
-                    return self.x, self.y, direcao #acho melhor os returns, mas primeiro, salvar
                 elif alvo_pacman[1] < self.y and self.pode_mover(3, tabuleiro, celula_largura, celula_altura):
                     direcao = 3
                     self.y += self.velocidade
-                    return self.x, self.y, direcao
                 elif alvo_pacman[0] < self.x and self.pode_mover(0, tabuleiro, celula_largura, celula_altura):
                     direcao = 0
                     self.x += self.velocidade
-                    return self.x, self.y, direcao
                 elif self.pode_mover(3, tabuleiro, celula_largura, celula_altura):
                     direcao = 3
                     self.y += self.velocidade
-                    return self.x, self.y, direcao
                 elif self.pode_mover(2, tabuleiro, celula_largura, celula_altura):
                     direcao = 2
                     self.y -= self.velocidade
-                    return self.x, self.y, direcao
                 elif self.pode_mover(1, tabuleiro, celula_largura, celula_altura):
                     direcao = 1
                     self.x -= self.velocidade
-                    return self.x, self.y, direcao
             elif self.pode_mover(1, tabuleiro, celula_largura, celula_altura):
                 if alvo_pacman[1] > self.y and self.pode_mover(2, tabuleiro, celula_largura, celula_altura):
                     direcao = 2
-                    self.y -= self.velocidade
-                    return self.x, self.y, direcao
+                    self.y -= self.velocidade 
                 if alvo_pacman[1] < self.y and self.pode_mover(3, tabuleiro, celula_largura, celula_altura):
                     direcao = 3
                     self.y += self.velocidade
-                    return self.x, self.y, direcao
                 else:
                     self.x -= self.velocidade
-                    return self.x, self.y, direcao
         elif direcao == 0:
             if alvo_pacman[1] > self.y and self.pode_mover(2, tabuleiro, celula_largura, celula_altura):
                 direcao = 2
                 self.y += self.velocidade
             elif alvo_pacman[0] < self.x and self.pode_mover(0, tabuleiro, celula_largura, celula_altura):
                 self.x += self.velocidade
-                return self.x, self.y, direcao
             elif not self.pode_mover(0, tabuleiro, celula_largura, celula_altura):
                 if alvo_pacman[1] > self.y and self.pode_mover(1, tabuleiro, celula_largura, celula_altura):
                     direcao = 2
                     self.y -= self.velocidade
-                    return self.x, self.y, direcao
                 elif alvo_pacman[1] < self.y and self.pode_mover(3, tabuleiro, celula_largura, celula_altura):
                     direcao = 3
                     self.y += self.velocidade
-                    return self.x, self.y, direcao
                 elif alvo_pacman[0] > self.x and self.pode_mover(1, tabuleiro, celula_largura, celula_altura):
                     direcao = 1
                     self.x -= self.velocidade
-                    return self.x, self.y, direcao
                 elif self.pode_mover(3, tabuleiro, celula_largura, celula_altura):
                     direcao = 3
                     self.y += self.velocidade
-                    return self.x, self.y, direcao
                 elif self.pode_mover(1, tabuleiro, celula_largura, celula_altura):
                     direcao = 2
                     self.y -= self.velocidade
-                    return self.x, self.y, direcao
                 elif self.pode_mover(0, tabuleiro, celula_largura, celula_altura):
                     direcao = 0
                     self.x -= self.velocidade
-                    return self.x, self.y, direcao
             elif self.pode_mover(0, tabuleiro, celula_largura, celula_altura):
                 if alvo_pacman[1] > self.y and self.pode_mover(1, tabuleiro, celula_largura, celula_altura):
                     direcao = 2
                     self.y -= self.velocidade
-                    return self.x, self.y, direcao
                 if alvo_pacman[1] < self.y and self.pode_mover(3, tabuleiro, celula_largura, celula_altura):
                     direcao = 3
                     self.y += self.velocidade
-                    return self.x, self.y, direcao
                 else:
                     self.x += self.velocidade
-                    return self.x, self.y, direcao
+                    
         elif direcao == 3:
             if alvo_pacman[0] < self.x and self.pode_mover(0, tabuleiro, celula_largura, celula_altura):
                 direcao = 0
                 self.x += self.velocidade
-                #return self.x, self.y, direcao
             elif alvo_pacman[1] < self.y and self.pode_mover(3, tabuleiro, celula_largura, celula_altura):
                 direcao = 3
                 self.y += self.velocidade
-                #return self.x, self.y, direcao
             elif not self.pode_mover(3, tabuleiro, celula_largura, celula_altura):
                 if alvo_pacman[0] > self.x and self.pode_mover(1, tabuleiro, celula_largura, celula_altura):
                     direcao = 1
@@ -302,28 +281,22 @@ class Fantasma:
                 elif alvo_pacman[1] > self.y and self.pode_mover(2, tabuleiro, celula_largura, celula_altura):
                     direcao = 2
                     self.y -= self.velocidade
-                    return self.x, self.y, direcao
                 elif self.pode_mover(1, tabuleiro, celula_largura, celula_altura):
                     direcao = 1
                     self.x -= self.velocidade
-                    return self.x, self.y, direcao
                 elif self.pode_mover(3, tabuleiro, celula_largura, celula_altura):
                     direcao = 3
                     self.y += self.velocidade
-                    return self.x, self.y, direcao
                 elif self.pode_mover(0, tabuleiro, celula_largura, celula_altura):
                     direcao = 0
                     self.x += self.velocidade
-                    return self.x, self.y, direcao
             elif self.pode_mover(3, tabuleiro, celula_largura, celula_altura):
                 if alvo_pacman[0] > self.x and self.pode_mover(1, tabuleiro, celula_largura, celula_altura):
                     direcao = 1
                     self.x -= self.velocidade
-                    return self.x, self.y, direcao
                 elif alvo_pacman[0] < self.x and self.pode_mover(0, tabuleiro, celula_largura, celula_altura):
                     direcao = 0
                     self.x += self.velocidade
-                    return self.x, self.y, direcao
                 else:
                     self.y -= self.velocidade
         elif direcao == 2:
@@ -358,4 +331,4 @@ class Fantasma:
                 else:
                     self.y += self.velocidade
 
-        return self.x, self.y, direcao
+        

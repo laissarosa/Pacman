@@ -7,7 +7,7 @@ class Blink(Fantasma):
         pygame.init()
         self.lista_imagens = self.imagem.blink_img
 
-    def mover(self, pacman_poderoso: bool, x_pac : int, y_pac: int, tabuleiro: list, celula_largura: int, celula_altura: int) -> None: #deixar apenas o nom mover no método
+    def mover(self, pacman_poderoso: bool, x_pac : int, y_pac: int, tabuleiro: list, celula_largura: int, celula_altura: int) -> None: 
         if not self.fantasma_saiu: 
             self.x , self.y= self.sair_da_casinha(256, 216, tabuleiro, celula_largura, celula_altura)
             if round(self.y) == 216:
