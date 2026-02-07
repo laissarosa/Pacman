@@ -25,33 +25,39 @@ Recriação do clássico jogo Pac-Man em Python, desenvolvido para a disciplina 
 📁 Estrutura do Projeto
 
 O projeto está organizado de forma modular, separando responsabilidades como personagens, recursos visuais, sons e lógica principal do jogo. Essa organização facilita a manutenção, leitura do código e futuras expansões.
+```
+📦 projeto-pacman
+├── 📁 main
+│   └── pacmain.py            # Arquivo principal responsável por iniciar o jogo
+│
+├── 📁 desenvolvimento
+│   └── jogo.py               # Classe Jogo, responsável pelo loop principal e controle do jogo
+│
+├── 📁 personagens
+│   ├── fantasma.py           # Classe base dos fantasmas
+│   ├── clyde.py              # Fantasma Clyde (comportamento baseado em distância)
+│   ├── inky.py               # Fantasma Inky (movimento semi-aleatório)
+│   ├── pynk.py               # Fantasma Pynk (antecipação da posição do Pacman)
+│   ├── pacman.py             # Classe principal do jogador
+│   └── tangerina.py          # Item especial que concede bônus ao jogador
+│
+├── 📁 imagens
+│   ├── imagem.py             # Gerenciamento e carregamento das imagens do jogo
+│   └── 📁 sprites
+│       ├── 📁 clyde          # Sprites do fantasma Clyde
+│       ├── 📁 inky           # Sprites do fantasma Inky
+│       ├── 📁 blink          # Sprites do fantasma Blink
+│       ├── 📁 pynk           # Sprites do fantasma Pynk
+│       ├── 📁 pacman_imgs    # Sprites e animações do Pacman
+│       └── 📁 indefeso       # Sprites dos fantasmas em estado de medo
+│
+├── 📁 som
+│   ├── audio.py              # Controle de efeitos sonoros e trilha sonora
+│   └── 📁 trilha             # Arquivos de áudio (.wav) utilizados no jogo
+│
+└── 📄 README.md               # Documentação do projeto
 
-
-packman/
-├── main/
-│ └── pacmain.py
-├── desenvolvimento/
-│ └── jogo.py
-├── imagens/
-│ ├── imagem.py
-│ └── sprites/
-│ ├── blink/
-│ ├── clyde/
-│ ├── inky/
-│ ├── pacman_imgs/
-│ └── indefeso/
-├── personagens/
-│ ├── pacman.py
-│ ├── fantasma.py
-│ ├── inky.py
-│ ├── pynk.py
-│ └── tangerina.py
-├── som/
-│ └── audio.py
-├── README.md
-└── requirements.txt
-
-
+```
 ## ⚠️ Observações
 
 - Projeto com finalidade acadêmica
