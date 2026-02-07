@@ -1,8 +1,29 @@
 import pygame 
 from pygame import Surface
 from imagens.imagem import Imagem
+<<<<<<< HEAD
 #Superclasse com os métodos compartilhados dos fantasmas. Os 4 herdam dela
 class Fantasma: 
+=======
+
+class Fantasma: 
+
+    """
+    Superclasse responsável por definir o comportamento base de todos os
+    fantasmas do jogo.
+
+    Esta classe centraliza atributos e funcionalidades compartilhadas entre
+    Blink, Inky, Clyde e Pynk, como movimentação no labirinto, controle de
+    animação, estados de medo, saída da casinha e verificação de colisões
+    com o tabuleiro.
+
+    A partir dessa classe, cada fantasma especializado implementa sua
+    própria estratégia de movimentação, reutilizando a lógica comum e
+    garantindo organização, reutilização de código e facilidade de
+    manutenção do projeto.
+    """
+
+>>>>>>> 8639339 (add code documentation)
     def __init__(self, imagem : Imagem, velocidade: float = 2.8):
         pygame.init()
         self.__x = 0
@@ -330,5 +351,9 @@ class Fantasma:
                     self.x += self.velocidade
                 else:
                     self.y += self.velocidade
+<<<<<<< HEAD
+=======
+        return self.x, self.y, self.direcao
+>>>>>>> 8639339 (add code documentation)
 
         

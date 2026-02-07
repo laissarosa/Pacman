@@ -2,6 +2,23 @@ from personagens.fantasma import Fantasma
 import pygame
 
 class Blink(Fantasma):
+<<<<<<< HEAD
+=======
+
+    """
+    Classe que representa o fantasma Blink, responsável por perseguir o Pac-Man
+    de forma direta e agressiva.
+
+    Blink herda o comportamento base da classe Fantasma e implementa uma lógica
+    de movimentação focada em seguir a posição atual do Pac-Man, tomando decisões
+    de direção com base na distância horizontal e vertical.
+
+    Quando o Pac-Man está em estado poderoso, o comportamento do Blink muda para
+    fuga, respeitando a mecânica clássica do jogo. Essa classe encapsula o estilo
+    de perseguição mais simples e previsível entre os fantasmas.
+    """
+
+>>>>>>> 8639339 (add code documentation)
     def __init__(self, imagem, velocidade = 1.3):
         super().__init__(imagem, velocidade)
         pygame.init()

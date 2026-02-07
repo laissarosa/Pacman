@@ -4,6 +4,22 @@ import random
 from imagens.imagem import Imagem
 
 class Tangerina:
+<<<<<<< HEAD
+=======
+
+    """
+    Classe responsável por representar a tangerina bônus do jogo.
+
+    A tangerina é um item especial que aparece periodicamente no mapa e,
+    quando coletada pelo Pac-Man, concede pontos extras e pode aumentar
+    a quantidade de vidas do jogador.
+
+    Esta classe controla o estado de ativação da tangerina, sua posição
+    no mapa e o tempo de reaparecimento, garantindo que o bônus surja
+    de forma dinâmica durante a partida.
+    """
+
+>>>>>>> 8639339 (add code documentation)
     def __init__(self, imagem: Imagem):
         pygame.init()
         self.__x = 64

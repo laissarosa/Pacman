@@ -16,6 +16,25 @@ from personagens.tangerina import Tangerina
 from imagens.imagem import Imagem
 
 class Jogo:
+<<<<<<< HEAD
+=======
+
+    """
+    Classe principal responsável por gerenciar o ciclo completo do jogo.
+
+    Esta classe atua como o núcleo da aplicação, coordenando a interação
+    entre todos os componentes do jogo, como cenário (labirinto),
+    personagens (Pac-Man, fantasmas e itens), áudio, imagens, telas e cenas.
+    Ela controla o loop principal do jogo, o fluxo de estados (rodando,
+    pausado, fim de jogo), além de eventos de teclado e atualização gráfica.
+
+    Também é responsável por inicializar posições, reiniciar partidas,
+    salvar e carregar o estado do jogo em arquivo, garantindo a continuidade
+    da partida, e por sincronizar lógica, animações, colisões e sons durante
+    a execução.
+    """
+
+>>>>>>> 8639339 (add code documentation)
     def __init__(self) -> None:
         pygame.init()
         self.__inicializar()

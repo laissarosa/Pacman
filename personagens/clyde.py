@@ -2,6 +2,23 @@ from personagens.fantasma import Fantasma
 import pygame
 
 class Clyde(Fantasma):
+<<<<<<< HEAD
+=======
+
+    """
+    Classe que representa o fantasma Clyde, caracterizado por um comportamento
+    híbrido entre perseguição e fuga.
+
+    Clyde herda as funcionalidades básicas da classe Fantasma, mas sua lógica
+    de movimentação varia conforme a distância em relação ao Pac-Man. Quando
+    está longe, tende a perseguir o jogador; quando se aproxima demais, passa
+    a fugir, tornando seu comportamento imprevisível.
+
+    Essa alternância de estados adiciona complexidade à jogabilidade e
+    diferencia o Clyde dos demais fantasmas.
+    """
+
+>>>>>>> 8639339 (add code documentation)
     def __init__(self, imagem, velocidade = 1.3):
         super().__init__(imagem, velocidade)
         pygame.init()

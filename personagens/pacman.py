@@ -8,6 +8,23 @@ from personagens.tangerina import Tangerina
 from personagens.fantasma import Fantasma
 
 class Pacman:
+<<<<<<< HEAD
+=======
+
+    """
+    Classe responsável por representar o personagem Pac-Man e centralizar
+    toda a lógica relacionada ao jogador.
+
+    Esta classe controla o estado do Pac-Man, incluindo posição em pixels,
+    direção atual, animações, pontuação, vidas e estados especiais como
+    poder temporário e morte.
+
+    Também é responsável por gerenciar movimentação no tabuleiro,
+    interação com bolinhas, superpoderes, fantasmas e itens especiais,
+    além de lidar com colisões e regras principais da jogabilidade.
+    """
+
+>>>>>>> 8639339 (add code documentation)
     def __init__(self, imagem: Imagem, velocidade: float = 1.5):
         self.__inicializar()
         self.__imagem = imagem

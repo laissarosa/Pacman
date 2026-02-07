@@ -3,6 +3,23 @@ import pygame
 import random
 
 class Inky(Fantasma):
+<<<<<<< HEAD
+=======
+
+    """
+    Classe que representa o fantasma Inky, caracterizado por um comportamento
+    imprevisível e parcialmente aleatório.
+
+    Inky herda a estrutura base da classe Fantasma, porém sua movimentação
+    combina tentativas de avanço contínuo com mudanças de direção aleatórias
+    quando encontra obstáculos, tornando seu padrão menos previsível que
+    os demais fantasmas.
+
+    Quando o Pac-Man está em estado poderoso, Inky alterna para o comportamento
+    de fuga, mantendo a coerência com a mecânica principal do jogo.
+    """
+
+>>>>>>> 8639339 (add code documentation)
     def __init__(self, imagem, velocidade = 1.3):
         super().__init__(imagem, velocidade)
         pygame.init()
@@ -37,7 +54,10 @@ class Inky(Fantasma):
                         return
                 if not self.pode_mover(0, tabuleiro, celula_largura, celula_altura):
                     self.direcao = random.choice([1,2,3])
+<<<<<<< HEAD
                     #print("embaralhei a direçaõ no 0")
+=======
+>>>>>>> 8639339 (add code documentation)
                     return
             elif self.direcao == 1:
                 if  self.pode_mover(1, tabuleiro, celula_largura, celula_altura):
@@ -56,7 +76,10 @@ class Inky(Fantasma):
                     return
                 if not self.pode_mover(1, tabuleiro, celula_largura, celula_altura):
                     self.direcao = random.choice([0,2,3])
+<<<<<<< HEAD
                     #print("embaralhei a direçaõ no 1")
+=======
+>>>>>>> 8639339 (add code documentation)
             elif self.direcao == 2:
                 if self.pode_mover(2, tabuleiro, celula_largura, celula_altura):
                     self.direcao = 2
@@ -74,7 +97,10 @@ class Inky(Fantasma):
                         self.y += self.velocidade
                 if not self.pode_mover(2, tabuleiro, celula_largura, celula_altura):
                     self.direcao = random.choice([0,1,3])
+<<<<<<< HEAD
                     #print("embaralhei a direção no 2")
+=======
+>>>>>>> 8639339 (add code documentation)
             elif self.direcao == 3:
                 if self.pode_mover(3, tabuleiro, celula_largura, celula_altura):
                     self.y += self.velocidade
@@ -90,5 +116,9 @@ class Inky(Fantasma):
                         self.y -= self.velocidade
                 if not self.pode_mover(3, tabuleiro, celula_largura, celula_altura):
                     self.direcao = random.choice([0,1,2])
+<<<<<<< HEAD
                     #print("embaralhei no 3")
+=======
+                    
+>>>>>>> 8639339 (add code documentation)
                     

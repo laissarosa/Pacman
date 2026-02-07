@@ -1,6 +1,22 @@
 import pygame
 
 class Tela:
+<<<<<<< HEAD
+=======
+
+    """
+    Classe responsável pela configuração e gerenciamento da janela do jogo.
+
+    Esta classe define as dimensões da tela, inicializa a janela gráfica do
+    Pygame e calcula o tamanho das células utilizadas no labirinto, garantindo
+    o correto posicionamento e dimensionamento dos elementos do jogo.
+
+    Além disso, centraliza o acesso à superfície principal de renderização,
+    facilitando a comunicação entre o sistema de desenho do cenário,
+    personagens e interfaces.
+    """
+
+>>>>>>> 8639339 (add code documentation)
     def __init__(self, altura: int = 650, largura: int = 500):
         pygame.init()
         self.__altura = altura

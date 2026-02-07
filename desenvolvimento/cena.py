@@ -5,8 +5,28 @@ import os
 from som.audio import Audio
 from imagens.imagem import Imagem
 from pygame import Surface
+<<<<<<< HEAD
 #para controlar as telas start,game over, desenho das vidas do pacman, tela de pause, tela de configurar audio e tudo+
 class Cena:
+=======
+
+class Cena:
+
+    """
+    Classe responsável pelo controle das cenas e interfaces do jogo.
+
+    Esta classe gerencia todas as telas exibidas ao jogador, como a tela
+    inicial (start), pausa, configurações de áudio, tela de game over e
+    tela de vitória. Também é responsável por exibir textos na tela,
+    desenhar elementos da interface (vidas, pontuação) e controlar a
+    navegação entre estados do jogo por meio de eventos do teclado.
+
+    Além disso, a classe centraliza o controle de tempo (FPS), fonte de
+    texto e integração com os módulos de imagem e áudio, garantindo uma
+    experiência visual e sonora consistente durante a execução do jogo.
+    """
+
+>>>>>>> 8639339 (add code documentation)
     def __init__(self, imagem: Imagem):
         pygame.init()
         self.__inicializar()

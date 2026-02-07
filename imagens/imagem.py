@@ -2,6 +2,24 @@ import pygame
 import os
 
 class Imagem:
+<<<<<<< HEAD
+=======
+
+    """
+    Classe responsável pelo carregamento, armazenamento e organização de todas
+    as imagens utilizadas no jogo.
+
+    Esta classe centraliza o acesso aos sprites do Pac-Man, fantasmas, telas
+    auxiliares (start, pause, configurações) e itens especiais, garantindo que
+    todos os recursos visuais sejam carregados uma única vez e reutilizados
+    ao longo da execução do jogo.
+
+    Dessa forma, facilita a manutenção do projeto, evita carregamentos
+    repetidos e mantém a separação clara entre lógica do jogo e recursos
+    gráficos.
+    """
+
+>>>>>>> 8639339 (add code documentation)
     def __init__(self) -> None:
         pygame.init()
         self.__start_logo = ""

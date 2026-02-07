@@ -7,6 +7,24 @@ from pygame import Surface
 pygame.init()
 
 class Labirinto:
+<<<<<<< HEAD
+=======
+
+    """
+    Classe responsável por representar e gerenciar o cenário do jogo,
+    modelado como um labirinto bidimensional.
+
+    Esta classe armazena a estrutura do tabuleiro por meio de uma matriz
+    de valores inteiros, onde cada número representa um tipo específico
+    de elemento do cenário (paredes, caminhos, curvas, bolinhas comuns
+    e bolinhas especiais).
+
+    Além disso, a classe controla o estado visual de elementos animados,
+    como o efeito de piscar das bolinhas especiais, e é responsável por
+    desenhar todo o labirinto na tela.
+    """
+
+>>>>>>> 8639339 (add code documentation)
     def __init__(self) -> None:
         self.__inicializar()
         self.__tabuleiro = [[6, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 5],

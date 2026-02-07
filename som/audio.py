@@ -2,6 +2,23 @@ import pygame
 import os
 
 class Audio:
+<<<<<<< HEAD
+=======
+
+    """
+    Classe responsável por gerenciar todos os sons e músicas do jogo.
+
+    Esta classe centraliza o controle de áudio, incluindo músicas de fundo,
+    efeitos sonoros e ajustes de volume. Ela utiliza os canais do pygame.mixer
+    para permitir a reprodução simultânea de diferentes sons, como a sirene,
+    coleta de bolinhas, superpoder, morte do Pac-Man e eventos especiais.
+
+    Também controla sons temporizados, como a música do superpoder,
+    garantindo que sejam iniciados e interrompidos corretamente
+    de acordo com o estado do jogo.
+    """
+
+>>>>>>> 8639339 (add code documentation)
     def __init__(self):
         pygame.init()
         pygame.mixer.init()
@@ -24,6 +41,7 @@ class Audio:
     def diretorio_audios(self, diretorio_audios):
         self.__diretorio_audios = diretorio_audios
 
+<<<<<<< HEAD
     '''def ajustar_sons(self, cena):
         volume = pygame.mixer.Channel(5).get_volume()
 
@@ -79,6 +97,8 @@ class Audio:
                     pygame.mixer.music.set_volume(volume)
                     pygame.mixer.Channel(2).set_volume(volume)'''
 
+=======
+>>>>>>> 8639339 (add code documentation)
     def ajustar_volume_sons(self, volume: float) -> None:
         pygame.mixer.Channel(5).set_volume(volume)
         pygame.mixer.Channel(1).set_volume(volume)

@@ -1,14 +1,35 @@
 from personagens.fantasma import Fantasma
 
 class Pynk(Fantasma):
+<<<<<<< HEAD
+=======
+
+    """
+    Classe que representa o fantasma Pynk, herdando o comportamento base
+    da classe Fantasma.
+
+    O Pynk possui uma inteligência de perseguição baseada na previsão do
+    movimento do Pac-Man, definindo como alvo uma posição alguns blocos
+    à frente da direção atual do jogador.
+
+    Quando o Pac-Man está em estado poderoso, o Pynk muda seu comportamento
+    para fuga. Caso contrário, ele utiliza estratégias de decisão para
+    navegar pelo labirinto, tentando interceptar o Pac-Man de forma mais
+    estratégica do que uma perseguição direta.
+    """
+
+>>>>>>> 8639339 (add code documentation)
     def __init__(self, imagem, velocidade = 1.3):
         super().__init__(imagem, velocidade)
         self.lista_imagens = self.imagem.pynk_img
 
+<<<<<<< HEAD
     '''def  inicializar_posicao(self) -> None:
         self.x = 14 * 16
         self.y = 14 * 18'''
 
+=======
+>>>>>>> 8639339 (add code documentation)
     def mover(self,pacman_poderoso: bool, x_pac : int, y_pac: int, direcao_pac: int, tabuleiro: list, celula_largura: int, celula_altura: int) -> None:
         if not self.fantasma_saiu :
             self.x , self.y = self.sair_da_casinha(256, 216,tabuleiro, celula_largura, celula_altura)
