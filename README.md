@@ -25,7 +25,7 @@ Recriação do clássico jogo Pac-Man em Python, desenvolvido para a disciplina 
 📁 Estrutura do Projeto
 
 O projeto está organizado de forma modular, separando responsabilidades como personagens, recursos visuais, sons e lógica principal do jogo. Essa organização facilita a manutenção, leitura do código e futuras expansões.
-'''
+
 
 packman/
 ├── main/
@@ -50,7 +50,7 @@ packman/
 │ └── audio.py
 ├── README.md
 └── requirements.txt
-'''
+
 
 ## ⚠️ Observações
 
